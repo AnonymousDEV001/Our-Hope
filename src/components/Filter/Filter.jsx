@@ -47,13 +47,13 @@ const Filter = ({ countries }) => {
             <option value="select" disabled>
               Select Your City
             </option>
-            {countries.countries.map((country) =>
-              country.provinces.map((province) => (
+            {countries?.countries?.map((country) =>
+              country?.provinces?.map((province) => (
                 <optgroup
                   key={`${country.name}-${province.name}`}
                   label={province.name}
                 >
-                  {province.districts.map((district) => (
+                  {province?.districts?.map((district) => (
                     <React.Fragment key={`${province.name}-${district.name}`}>
                       <option
                         key={`${province.name}-${district.name}-label`}
@@ -62,7 +62,7 @@ const Filter = ({ countries }) => {
                       >
                         --- {district.name} ---
                       </option>
-                      {district.cities.map((cityName) => (
+                      {district?.cities?.map((cityName) => (
                         <option
                           key={`${province.name}-${district.name}-${cityName}`}
                           value={cityName}

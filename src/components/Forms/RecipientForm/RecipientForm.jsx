@@ -58,15 +58,15 @@ const RecipientForm = ({ countries }) => {
               <option value="select" disabled>
                 Select Your City
               </option>
-              {countries.countries.map((country) =>
-                country.provinces.map((province) => (
+              {countries?.countries?.map((country) =>
+                country?.provinces?.map((province) => (
                   <optgroup key={province.name} label={province.name}>
-                    {province.districts.map((district) => (
+                    {province?.districts?.map((district) => (
                       <React.Fragment key={district.name}>
                         <option value="none" disabled>
                           --- {district.name} ---
                         </option>
-                        {district.cities.map((city) => (
+                        {district?.cities?.map((city) => (
                           <option key={city} value={city}>
                             {city}
                           </option>

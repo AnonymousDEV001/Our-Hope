@@ -23,7 +23,7 @@ const Map = ({ apiKey }) => {
             .then((res) => res.json())
             .then((data) => {
               if (data.loc) {
-                const [lat, lng] = data.loc.split(",").map(Number); // Extract lat/lng
+                const [lat, lng] = data.loc.split(",")?.map(Number); // Extract lat/lng
                 setCoords({ lat, lng });
               } else {
                 setError("Failed to get location.");

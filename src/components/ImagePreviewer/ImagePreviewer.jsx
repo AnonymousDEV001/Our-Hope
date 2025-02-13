@@ -18,7 +18,7 @@ const ImagePreviewer = (props) => {
     <>
       <div className="relative">
         <div className="flex gap-2 w-full h-full px-2 flex-wrap">
-          {props.images.map((img, index) => {
+          {props?.images?.map((img, index) => {
             return (
               <div
                 onClick={() => {

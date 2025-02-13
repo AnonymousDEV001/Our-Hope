@@ -44,11 +44,11 @@ const Card = async ({ city, bloodGroup, browserPage }) => {
       <h2 className="text-2xl text-red-800 font-semibold">Be a Blood Donor</h2>
       <div>
         <ul className="flex flex-col gap-3 my-3">
-          {donors.length === 0 && (
+          {donors?.length === 0 && (
             <p className="font-bold">Oops No Data Found</p>
           )}
 
-          {donors.map((donor, index) => {
+          {donors?.map((donor, index) => {
             return (
               <li key={index} className="border-b py-3 flex flex-col gap-2">
                 <div>

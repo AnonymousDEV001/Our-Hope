@@ -34,7 +34,7 @@ const page = () => {
         </div>
 
         <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
-          {faqs.map((faq, index) => {
+          {faqs?.map((faq, index) => {
             return (
               <div
                 key={index}

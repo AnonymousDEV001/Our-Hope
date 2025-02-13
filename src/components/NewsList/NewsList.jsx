@@ -5,7 +5,7 @@ import { useState } from "react";
 const NewsList = ({ newsData }) => {
   return (
     <div className="flex flex-col gap-6">
-      {newsData.map((news) => (
+      {newsData?.map((news) => (
         <NewsCard key={news.id} news={news} />
       ))}
     </div>

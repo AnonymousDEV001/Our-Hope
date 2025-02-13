@@ -54,7 +54,7 @@ const Card = async ({ city, bloodGroup, browserPage }) => {
         {recipients.length === 0 && (
             <p className="font-bold">Oops No Data Found</p>
           )}
-          {recipients.map((recipient, index) => {
+          {recipients?.map((recipient, index) => {
             return (
               <Link key={index} href={`/bloodExchange/${recipient._id}`}>
                 <li className="border-b p-4 py-3 flex flex-col gap-2 hover:bg-red-800 hover:text-white cursor-pointer transition-colors duration-300">
