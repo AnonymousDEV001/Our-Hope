@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import { Donor, Recipient } from "./models";
 import { connectToDb } from "./utils";
+import path from "path"
 
 export const getRecipients = async ({
   page = 1,
@@ -70,7 +71,8 @@ export const getRecipient = async (_id) => {
 
 export const getCountries = async () => {
   try {
-    const data = await fs.readFile("./src/lib/data/countries.json", "utf-8"); // Read file asynchronously
+    let filePath = path.join(process.cwd(),"src/lib/data/countries.json")
+    const data = await fs.readFile(filePath, "utf-8"); // Read file asynchronously
     return JSON.parse(data); // Convert JSON string to JavaScript object
   } catch (error) {
     console.error("Error reading countries.json:", error);
