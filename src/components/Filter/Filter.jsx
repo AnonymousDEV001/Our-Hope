@@ -9,6 +9,8 @@ const Filter = ({ countries }) => {
     params.get("bloodGroup") || "select"
   );
   const [city, setCity] = useState(params.get("city") || "select");
+
+  console.log(countries?.countries)
   
   return (
     <div className="flex flex-col gap-4">
