@@ -92,8 +92,8 @@ The software will be a web application accessible via standard web browsers. It 
 - **FR-09:** The system shall display relevant news (Health, Weather) based on user location.
 
 ### 3.5 Contact and Privacy
-- **FR-10:** The system shall only display a Donor's contact number if the Donor has explicitly enabled "Show Contact Info" visibility.
-- **FR-11:** The system shall protect user passwords using encryption (hashing).
+- **FR-10:** The system shall display Donor contact details publicly to facilitate immediate connection.
+- **FR-11:** The system shall require users to acknowledge that their submitted data will be public.
 
 
 ### 3.6 Notifications
@@ -106,13 +106,12 @@ The software will be a web application accessible via standard web browsers. It 
 - **NFR-02:** The system shall support at least 100 concurrent users without performance degradation.
 
 ### 4.2 Security
-- **NFR-03:** Passwords shall be salted and hashed (e.g., using bcrypt or Argon2).
-- **NFR-04:** All data transmission shall occur over HTTPS.
-- **NFR-05:** The system shall prevent SQL Injection and XSS attacks through input validation and sanitization.
+- **NFR-03:** All data transmission shall occur over HTTPS.
+- **NFR-04:** The system shall prevent SQL Injection/NoSQL Injection and XSS attacks through input validation.
 
 ### 4.3 Privacy
-- **NFR-06:** User contact details default to "Hidden" upon registration.
-- **NFR-07:** Explicit consent is required to share data with other users.
+- **NFR-05:** Donor contact details are **visible to the public** by default to ensure rapid response.
+- **NFR-06:** Users must be explicitly informed during registration that their data will be public.
 
 ### 4.4 Usability
 - **NFR-08:** The UI shall be responsive and adapt to mobile and desktop screens.
@@ -146,7 +145,7 @@ The system shall store the following entities:
 
 ### 6.2 Format and Privacy Considerations
 - Dates shall be stored in UTC ISO 8601 format.
-- Personally Identifiable Information (PII) like phone numbers must be treated with care and only exposed based on user settings.
+- Personally Identifiable Information (PII) like phone numbers are considered public for the purpose of this platform.
 
 ## 7. System Models
 
